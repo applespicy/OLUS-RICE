@@ -81,6 +81,6 @@ const rice = [
                 "Description": "White rice with Assorted meat"
                 
         }
-]  
+]   
 
 export default rice

@@ -1,12 +1,22 @@
 import React, {useState} from "react";
+import {Modal} from 'react-bootstrap';
 
 function Rice({rice}){
     const [quantity, setquantity] = useState(1)
     const[size, setsize]= useState('small')
+    const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
     return (
         <div className="m-5 shadow-lg p-3 mb-5 bg-white rounded">
+            
+            <div onClick={handleShow}>
             <hi>{rice.name}</hi>
             <img src={rice.image} className="img-fluid" alt =""/>
+            </div>
+            
             <div className="flex-container">
                  <div className="w-100 m-1">
                     <p>Sizes</p>
@@ -37,6 +47,22 @@ function Rice({rice}){
                         <button className="btn">ADD TO CART</button>
                     </div>
                 </div>
+
+                <Modal show ={show}>
+      <Modal.Header closeButton>
+        <Modal.Title>{rice.name}</Modal.Title>
+      </Modal.Header>
+
+      <Modal.Body>
+        <img src={rice.image} className="img-fluid"></img>
+        <p>{rice.Description}</p>
+      </Modal.Body>
+
+      <Modal.Footer>
+      <button className="btn" onClick={handleClose}>CLOSE</button>
+      </Modal.Footer>
+    </Modal>
+
         </div>
     )
 }
