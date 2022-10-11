@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import {Modal} from 'react-bootstrap';
+import {useDispatch, useSelector} from 'react-redux'
+import {addToCart} from "../actions/cartAction"
 
 function Rice({rice}){
     const [quantity, setquantity] = useState(1)
@@ -9,11 +11,17 @@ function Rice({rice}){
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const dispatch = useDispatch
+
+  function addtocart(){
+        dispatch(addToCart(rice, quantity,size))
+  }
+
     return (
         <div className="m-5 shadow-lg p-3 mb-5 bg-white rounded">
             
             <div onClick={handleShow}>
-            <hi>{rice.name}</hi>
+            <h1>{rice.name}</h1>
             <img src={rice.image} className="img-fluid" alt =""/>
             </div>
             
@@ -41,10 +49,10 @@ function Rice({rice}){
                 <div className="flex-container">
                     
                     <div className="m-1 w-100">
-                        <hi className = 'mt-1'>Price: ${rice.prices[0][size]* quantity} </hi>
+                        <h1 className = 'mt-1'>Price: ${rice.prices[0][size]* quantity} </h1>
                     </div>
                     <div className="m-1 w-100">
-                        <button className="btn">ADD TO CART</button>
+                        <button className="btn" onClick={addtocart}>ADD TO CART</button>
                     </div>
                 </div>
 
@@ -54,7 +62,7 @@ function Rice({rice}){
       </Modal.Header>
 
       <Modal.Body>
-        <img src={rice.image} className="img-fluid"></img>
+        <img src={rice.image} className="img-fluid"/>
         <p>{rice.Description}</p>
       </Modal.Body>
 
