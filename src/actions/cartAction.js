@@ -1,6 +1,6 @@
-export const addToCart=(rice, quantity, size )=>dispatch=>{
+export const addToCart=(rice, quantity, size )=>(dispatch, getState)=>{
 
-var cartItem ={
+let cartItem ={
     name: rice.name,
     _id : rice._id,
     image: rice.image,
@@ -11,6 +11,9 @@ var cartItem ={
 }
 
 dispatch({type:'ADD_TO_CART', payload: cartItem})
+
+// const cartItems = getState().cartReducer
+// localStorage.setItem('cartItems',  )
 
 }
 

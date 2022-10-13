@@ -9,13 +9,14 @@
 //     }
 // }
 
-export const cartReducer = (state={cartItem:[]},action)=>{
+export const cartReducer = (state={cartItems:[]},action)=>{
     
-    switch(action.type){
+    switch(action.type)
+    {
         case 'ADD_TO_CART' : return{
 
-            ...state,
-            cartItem:[...state.cartItem, action.payload]
+            
+           cartItems:[...state.cartItems, action.payload]
         }
         default : return state
     }

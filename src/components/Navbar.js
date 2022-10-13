@@ -34,7 +34,7 @@ function Navbar() {
                         </li>)}
                         
                         <li className="nav-item">
-                            <a className="nav-link" href="/cart">Cart{cartstate.cartItem.lenght}</a>
+                            <a className="nav-link" href="/cart">Cart</a>
                         </li>
                        
                         

@@ -50,3 +50,13 @@ input{
   height: 80px !important;
   width: 80px !important;
 }
+.fa-plus{
+  color: blue !important;
+  margin: 5px !important;
+
+}
+.fa-minus{
+  color: red !important;
+  margin: 5px !important;
+
+}

@@ -14,7 +14,7 @@
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.4",
-    "react-router-dom": "^5.3.0",
+    "react-router-dom": "^5.3.4",
     "react-router-redux": "^5.0.0-alpha.9",
     "react-scripts": "5.0.1",
     "react-stripe-checkout": "^2.6.3",
@@ -51,4 +51,3 @@
   "proxy": "http://localhost:5000/",
   "allowedHosts": "all"
 }
-

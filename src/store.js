@@ -18,14 +18,28 @@ const finalReducer = combineReducers({
 
 const currentUser= localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')):null
 
+
+
+const cartItems = localStorage.getItem("cartItem") ? JSON.parse(localStorage.getItem('cartItem')) : []
+
 const initialState = {
+    
     loginUserReducer:{
         currentUser:currentUser
-    }
+    },
+    cartReducer:{
+        cartItems: cartItems
+    },
+
+    
 }
+
 const composeEnhancers = composeWithDevTools({})
 
 
 const store = createStore(finalReducer, initialState , composeEnhancers(applyMiddleware(thunk)))
+
+
+
 
 export default store

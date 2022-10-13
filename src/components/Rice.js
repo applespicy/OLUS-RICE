@@ -11,9 +11,10 @@ function Rice({rice}){
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const dispatch = useDispatch
+  const dispatch = useDispatch()
 
-  function addtocart(){
+  function addtocart()
+  {
         dispatch(addToCart(rice, quantity,size))
   }
 
