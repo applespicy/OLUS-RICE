@@ -7,6 +7,8 @@ import Homescreen from './screens/Homescreen';
 import Registerscreen from './screens/Registerscreen';
 import Cartscreen from './screens/Cartscreen'
 import Loginscreen from './screens/Loginscreen';
+import Orderscreen from './screens/Orderscreen';
+import Adminscreen from './screens/Adminscreen';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 
@@ -21,6 +23,8 @@ function App() {
  <Route exact path="/login" ><Loginscreen/></Route>
  <Route exact path="/cart" ><Cartscreen/></Route>
  <Route exact path="/register" ><Registerscreen/></Route>
+ <Route exact path="/orders" ><Orderscreen/></Route>
+ <Route path="/admin" ><Adminscreen/></Route>
  <Route path="/" ><Homescreen/></Route>
  </Switch>
   </Router>

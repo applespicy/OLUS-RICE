@@ -60,3 +60,16 @@ input{
   margin: 5px !important;
 
 }
+.adminfunctions{
+  padding: 10px;
+  background-color: rgb(216, 216, 230);
+}
+.adminfunctions li{
+  list-style-type: none !important;
+  display: inline !important;
+  color:white
+}
+.adminfunctions li a{
+  color: black !important ;
+  padding: 10px !important;
+}

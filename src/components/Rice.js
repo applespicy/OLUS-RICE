@@ -30,8 +30,8 @@ function Rice({rice}){
                  <div className="w-100 m-1">
                     <p>Sizes</p>
                     <select className ='form-control'value ={size} onChange={(e)=>{setsize(e.target.value)}}>
-                        {rice.sizes.map(size=>{
-                            return <option value={size}>{size}</option>
+                        {rice.sizes.map((size)=>{
+                            return <option value={size}>{size}</option>;
                         })}
                     </select>
                  </div> 
@@ -40,7 +40,7 @@ function Rice({rice}){
                     <p>Quantity</p>
                     <select className ='form-control'value ={quantity} onChange ={(e)=>{setquantity(e.target.value)}}>
                         {[...Array(10).keys()].map((x, i)=>{
-                            return ( <option value={i+1}>{i+1}</option>)
+                            return  <option value={i+1}>{i+1}</option>;
                            
                         })}
                     </select>

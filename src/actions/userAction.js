@@ -35,3 +35,22 @@ export const logoutUser = ()=>dispatch=>{
         localStorage.removeItem('currentUser')
         window.location.href='/login'
 }
+
+
+export const getUserOrders=()=>async (dispatch, getState) =>{
+
+    const currentUser= getState().loginUserReducer.currentUser
+    dispatch({type: 'GET_USER_ORDER_REQUEST'})
+    try{
+        const response = await axios.get("/api/getuserorders",{userid: currentUser._id} )
+        console.log(response);
+        dispatch({
+            type: 'GET_USER_ORDER_SUCCESS', payload : response.data
+        })
+    }catch (error){
+        dispatch({
+            type: 'GET_USER_ORDER_FAILED', payload : error
+        })
+    }
+
+}

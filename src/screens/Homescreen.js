@@ -21,7 +21,7 @@ function Homescreen (){
             <div className="row">
 
                 {loading ? (<Loading/>): error ? (<Error error = 'Wrong Wrong Wrong'/>): (
-                        rices   .map(rice=>{
+                        rices.map(rice=>{
                             return <div className="col-md-4 " >
                                 <div >
                                     <Rice rice ={rice}/>

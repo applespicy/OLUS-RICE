@@ -8,19 +8,22 @@ import {composeWithDevTools} from 'redux-devtools-extension'
 import { getAllRicesReducer } from './reducers/riceReducers'
 import {cartReducer} from './reducers/cartReducer'
 import { loginUserReducer, registerUserReducer } from './reducers/userReducer'
+import { placeOrderReducer, getUserOrdersReducer } from './reducers/orderReducer'
 
 const finalReducer = combineReducers({
     getAllRicesReducer : getAllRicesReducer,
     cartReducer :cartReducer,
     registerUserReducer: registerUserReducer,
-    loginUserReducer: loginUserReducer
+    loginUserReducer: loginUserReducer,
+    placeOrderReducer:placeOrderReducer,
+    getUserOrdersReducer: getUserOrdersReducer
 })
 
 const currentUser= localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')):null
 
 
 
-const cartItems = localStorage.getItem("cartItem") ? JSON.parse(localStorage.getItem('cartItem')) : []
+const cartItems = localStorage.getItem("cartItems") ? JSON.parse(localStorage.getItem('cartItems')) : []
 
 const initialState = {
     
