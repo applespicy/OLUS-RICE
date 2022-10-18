@@ -1,6 +1,6 @@
 const express = require ('express');
 // n
-// const path = require('path');
+const path = require('path');
 const Rice = require('./models/Rice');
 
 const db = require ('./db.js');
@@ -26,10 +26,10 @@ app.use('/api', ordersRoute)
 
 
 
-app.get("/", (req, res)=>{
-    res.send ("sever is working")
+// app.get("/", (req, res)=>{
+//     res.send ("sever is working")
 
-});
+// });
 
 
 app.get("/getrices", (req, res)=>{
