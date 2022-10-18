@@ -24,10 +24,12 @@ app.use('/api', userRoute)
 app.use('/api', ordersRoute)
 
 
-app.get("/", (req, res)=>{
-    res.send ("sever is working")
 
-});
+
+// app.get("/", (req, res)=>{
+//     res.send ("sever is working")
+
+// });
 
 
 app.get("/getrices", (req, res)=>{
