@@ -26,10 +26,10 @@ app.use('/api', ordersRoute)
 
 
 
-// app.get("/", (req, res)=>{
-//     res.send ("sever is working")
+app.get("/", (req, res)=>{
+    res.send ("sever is working")
 
-// });
+});
 
 
 app.get("/getrices", (req, res)=>{
@@ -43,4 +43,6 @@ app.get("/getrices", (req, res)=>{
     });
 });
 
-app.listen(Port, ()=> `server is running on port 5000`);
+const port = process.env.PORT || 5000;
+
+app.listen(Port, ()=> `server is running on port`);
