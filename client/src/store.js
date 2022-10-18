@@ -5,10 +5,10 @@ import {createStore,  applyMiddleware} from 'redux'
 import thunk from 'redux-thunk'
 
 import {composeWithDevTools} from 'redux-devtools-extension'
-import { getAllRicesReducer } from './reducers/riceReducers'
+import { getAllRicesReducer, addRiceReducer } from './reducers/riceReducers'
 import {cartReducer} from './reducers/cartReducer'
-import { loginUserReducer, registerUserReducer } from './reducers/userReducer'
-import { placeOrderReducer, getUserOrdersReducer } from './reducers/orderReducer'
+import { loginUserReducer, registerUserReducer, getAllUsersReducer } from './reducers/userReducer'
+import { placeOrderReducer, getUserOrdersReducer, getAllOrdersReducer } from './reducers/orderReducer'
 
 const finalReducer = combineReducers({
     getAllRicesReducer : getAllRicesReducer,
@@ -16,7 +16,10 @@ const finalReducer = combineReducers({
     registerUserReducer: registerUserReducer,
     loginUserReducer: loginUserReducer,
     placeOrderReducer:placeOrderReducer,
-    getUserOrdersReducer: getUserOrdersReducer
+    getUserOrdersReducer: getUserOrdersReducer,
+    addRiceReducer:addRiceReducer,
+    getAllOrdersReducer:getAllOrdersReducer,
+    getAllUsersReducer: getAllUsersReducer
 })
 
 const currentUser= localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')):null

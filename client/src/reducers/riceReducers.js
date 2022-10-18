@@ -16,3 +16,22 @@ export const getAllRicesReducer = (state={rices:[]},action)=>{
         default : return state
     }
 }
+
+export const addRiceReducer = (state={},action)=>{
+    switch(action.type){
+        case 'ADD_RICE_REQUEST' : return{
+            loading : true,
+            ...state
+        }
+
+        case 'ADD_RICE_SUCCESS' : return{
+            loading:false,
+           success:true
+        }
+        case 'ADD_RICE_FAILED' : return{
+            loading: false,
+            error : action.payload
+        }
+        default : return state
+    }
+}

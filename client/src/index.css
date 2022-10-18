@@ -73,3 +73,10 @@ input{
   color: black !important ;
   padding: 10px !important;
 }
+
+td, tr, tr{
+  text-align: left;
+}
+.fa-trash{
+  color: red !important;
+}
