@@ -2,6 +2,7 @@ const { response } = require("express");
 const express = require("express");
 const router = express.Router();
 const User = require ('../models/User')
+// const {signAccessToken} = require('../helpers/jwthelper')
 
 router.post('/register', async(req, res)=>{
     const {name, email, password} = req.body
@@ -11,6 +12,7 @@ router.post('/register', async(req, res)=>{
     try {
         newUser.save()
         res.send('User Registered')
+       
     } catch (error) {
         return res.status(400).json({message:error})
     }
